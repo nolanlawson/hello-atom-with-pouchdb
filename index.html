@@ -13,36 +13,11 @@
       <li>PouchDB <script>document.write(PouchDB.version)</script></li>
     </ul>
 
-    <div id="output"></div>
+    <div id="idb"></div>
+    <div id="websql"></div>
+    <div id="leveldb"></div>
+    <div id="node-websql"></div>
 
-    <script>
-      var output = document.getElementById('output');
-
-      // IndexedDB
-
-      var db = new PouchDB('mydb-idb');
-
-      if (db.adapter === 'idb') {
-        output.innerHTML += '<br/>&#10004; We can use PouchDB with IndexedDB!';
-      }
-
-      // WebSQL
-
-      var websqlDB = new PouchDB('mydb-websql', {adapter: 'websql'});
-
-      if (websqlDB.adapter === 'websql') {
-        output.innerHTML += '<br/>&#10004; We can use PouchDB with WebSQL!';
-      }
-
-      // LevelDB
-
-      var PouchDBWithLevelDB = require('pouchdb');
-
-      var leveldbDB = new PouchDBWithLevelDB('mydb-leveldb');
-
-      if (leveldbDB.adapter === 'leveldb') {
-        output.innerHTML += '<br/>&#10004; We can use PouchDB with LevelDB!';
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -2,7 +2,12 @@
 
 This is a demo app that integrates PouchDB with Electron.
 
-It shows how to use any of the following PouchDB adapters: IndexedDB and WebSQL (browser-style) or LevelDB (Node-style).
+It shows how to use any of the following PouchDB adapters:
+
+  * IndexedDB (browser-style)
+  * WebSQL (browser-style)
+  * LevelDB (Node-style)
+  * SQLite (aka node-websql) (Node-style)
 
 The app looks like this:
 
@@ -32,3 +37,5 @@ In order to get LevelDB to work properly, this app uses a `postinstall` script t
 If this step doesn't work for you (e.g. because you are using an older version of Node, you're using Windows, etc.), you can remove the `postinstall` script from `package.json` and just use the browser adapters (IndexedDB/WebSQL) rather than the Node.js adapter (LevelDB).
 
 See [pouchdb-electron](https://github.com/nolanlawson/pouchdb-electron) for more installation instructions.
+
+Note that if you are using SQLite (via [node-websql](https://github.com/nolanlawson/node-websql)) you do not need to run this additional step. The [sqlite3](https://github.com/mapbox/node-sqlite3) module works out of the box.
