@@ -5,7 +5,7 @@
   "repository": "https://github.com/nolanlawson/hello-electron-with-pouchdb.git",
   "license": "Apache",
   "dependencies": {
-    "pouchdb": "5.3.0"
+    "pouchdb": "5.3.1"
   },
   "devDependencies": {
     "electron-prebuilt": "0.36.10"
