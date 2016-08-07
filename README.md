@@ -37,4 +37,6 @@ If this step doesn't work for you (e.g. because you are using an older version o
 
 See [pouchdb-electron](https://github.com/nolanlawson/pouchdb-electron) for more installation instructions.
 
-Note that if you are using SQLite (via [node-websql](https://github.com/nolanlawson/node-websql)) you do not need to run this additional step. The [sqlite3](https://github.com/mapbox/node-sqlite3) module works out of the box.
+## node-websql (sqlite3) adpater
+
+This is currently not working. There's an open issue: https://github.com/nolanlawson/hello-electron-with-pouchdb/issues/3
