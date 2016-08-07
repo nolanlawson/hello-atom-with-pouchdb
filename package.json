@@ -1,17 +1,16 @@
 {
-  "name": "hello-app",
-  "version": "0.1.0",
+  "name": "hello-electron-with-pouchdb",
+  "version": "1.0.0",
+  "description": "A minimal Electron application, with PouchDB",
   "main": "main.js",
-  "repository": "https://github.com/nolanlawson/hello-electron-with-pouchdb.git",
-  "license": "Apache",
-  "dependencies": {
-    "pouchdb": "5.3.1"
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "bash postinstall.sh"
   },
   "devDependencies": {
-    "electron-prebuilt": "0.36.10"
+    "electron-prebuilt": "^1.2.0"
   },
-  "scripts": {
-    "postinstall": "cd node_modules/leveldown && HOME=~/.electron-gyp node-gyp rebuild --target=0.36.10 --arch=x64 --dist-url=https://atom.io/download/atom-shell",
-    "start": "electron ."
+  "dependencies": {
+    "pouchdb": "^5.4.5"
   }
 }
