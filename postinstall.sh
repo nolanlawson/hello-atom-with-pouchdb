@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=$(node --eval "console.log(require('./node_modules/electron-prebuilt/package.json').version);")
+VERSION=$(node --eval "console.log(require('./node_modules/electron/package.json').version);")
 
 cd node_modules/leveldown
 HOME=~/.electron-gyp
