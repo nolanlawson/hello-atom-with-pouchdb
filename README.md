@@ -7,6 +7,7 @@ It shows how to use any of the following PouchDB adapters:
   * IndexedDB (browser-style)
   * WebSQL (browser-style)
   * LevelDB (Node-style)
+  * SQLite (Node-style)
 
 The app looks like this:
 
