@@ -40,6 +40,6 @@ See [pouchdb-electron](https://github.com/nolanlawson/pouchdb-electron) for more
 
 ## node-websql (sqlite3) adpater
 
-If you want to run PouchDB in "Node.js style" but using SQLite, then you should use `pouchdb-adapter-node-websql', as demonstrated in this project.
+If you want to run PouchDB in "Node.js style" but using SQLite, then you should use `pouchdb-adapter-node-websql`, as demonstrated in this project.
 
 Like LevelDB, this requires reinstalling a native module (in this case, [SQLite3](https://github.com/mapbox/node-sqlite3)). If this fails, you can just remove the `pouchdb-adapter-node-websql` dependency from `package.json` and also the `postinstall` script.
