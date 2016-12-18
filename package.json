@@ -8,9 +8,9 @@
     "postinstall": "bash postinstall.sh"
   },
   "devDependencies": {
-    "electron-prebuilt": "^1.2.0"
+    "electron": "^1.4.12"
   },
   "dependencies": {
-    "pouchdb": "^5.4.5"
+    "pouchdb": "^6.1.0"
   }
 }
