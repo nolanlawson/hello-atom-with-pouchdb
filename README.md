@@ -31,7 +31,7 @@ If it doesn't work, you might not have the latest version of Node/npm. Try insta
 
 ## Browser vs Node
 
-In order to get LevelDB to work properly, this app uses a `postinstall` script that rebuilds the LevelDB C++ dependencies for Electron.
+In order to get LevelDB to work propertly, we use [electron-rebuild](https://github.com/electron/electron-rebuild) to rebuild LevelDB for Electron.
 
 If this step doesn't work for you (e.g. because you are using an older version of Node, you're using Windows, etc.), you can remove the `postinstall` script from `package.json` and just use the browser adapters (IndexedDB/WebSQL) rather than the Node.js adapter (LevelDB).
 

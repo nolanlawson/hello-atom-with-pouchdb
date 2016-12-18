@@ -5,10 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "postinstall": "bash postinstall.sh"
+    "postinstall": "electron-rebuild"
   },
   "devDependencies": {
-    "electron": "^1.4.12"
+    "electron": "^1.4.12",
+    "electron-rebuild": "^1.4.0"
   },
   "dependencies": {
     "pouchdb": "^6.1.0"
