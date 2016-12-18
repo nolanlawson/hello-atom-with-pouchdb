@@ -11,7 +11,7 @@ It shows how to use any of the following PouchDB adapters:
 
 The app looks like this:
 
-![screenshot](screenshot.png)
+![screenshot](screenshot.png?update=1)
 
 ## Install and run
 
