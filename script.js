@@ -36,4 +36,15 @@ leveldbDB.info().then(function (info) {
   $('#leveldb').innerHTML = 'Error for LevelDB';
 });
 
+// node-websql
+
+NodePouchDB.plugin(require('pouchdb-adapter-node-websql'));
+var sqliteDB = new NodePouchDB('mydb-sqlite', {adapter: 'websql'});
+
+sqliteDB.info().then(function (info) {
+  $('#sqlitedb').innerHTML = '&#10004; We can use PouchDB with node-websql (SQLite)!';
+}).catch(function (err) {
+  $('#sqlitedb').innerHTML = 'Error for node-websql (SQLite)';
+});
+
 })();

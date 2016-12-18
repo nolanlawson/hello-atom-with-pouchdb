@@ -12,6 +12,7 @@
     "electron-rebuild": "^1.4.0"
   },
   "dependencies": {
-    "pouchdb": "^6.1.0"
+    "pouchdb": "^6.1.0",
+    "pouchdb-adapter-node-websql": "^6.1.0"
   }
 }
