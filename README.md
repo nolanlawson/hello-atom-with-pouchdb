@@ -28,11 +28,17 @@ And run:
 
     npm start
 
+Build:
+
+    npm run build
+
 If it doesn't work, you might not have the latest version of Node/npm. Try installing the latest using [nvm](https://github.com/creationix/nvm).
 
 ## Browser vs Node
 
-In order to get LevelDB to work propertly, we use [electron-rebuild](https://github.com/electron/electron-rebuild) to rebuild LevelDB for Electron.
+To build the application we use [electron-builder](https://github.com/electron-userland/electron-builder). You'll be able to build the app for macOS/Linux/Windows, but it must be compiled on the target platform. 
+
+In order to get the native dependencies (LevelDB and sqlite3) to work properly with the Electron version, we include the script `"postinstall": "electron-builder install-app-deps"`.
 
 If this step doesn't work for you (e.g. because you are using an older version of Node, you're using Windows, etc.), you can remove the `postinstall` script from `package.json`, replace the `pouchdb` dependency with `pouchdb-browser`, and just use the browser adapters (IndexedDB/WebSQL) rather than the Node.js adapter (LevelDB).
 

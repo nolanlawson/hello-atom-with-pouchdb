@@ -1,3 +1,4 @@
 node_modules
 mydb-*
 _pouch_mydb-sqlite
+dist
