@@ -5,14 +5,16 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "postinstall": "electron-rebuild"
+    "build": "electron-builder build",
+    "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "electron": "^1.4.12",
-    "electron-rebuild": "^1.4.0"
+    "electron": "^3.0.0",
+    "electron-builder": "^20.38.3"
   },
   "dependencies": {
-    "pouchdb": "^6.1.0",
-    "pouchdb-adapter-node-websql": "^6.1.0"
+    "pouchdb": "^7.0.0",
+    "pouchdb-adapter-node-websql": "^7.0.0",
+    "pouchdb-adapter-websql": "^7.0.0"
   }
 }

@@ -16,6 +16,7 @@ db.info().then(function (info) {
 
 // WebSQL
 
+PouchDB.plugin(require('pouchdb-adapter-websql'));
 var websqlDB = new PouchDB('mydb-websql', {adapter: 'websql'});
 
 websqlDB.info().then(function (info) {
@@ -24,11 +25,19 @@ websqlDB.info().then(function (info) {
   $('#websql').innerHTML = 'Error for WebSQL';
 });
 
+// File paths for LevelDB and node-websql
+
+var {remote} = require('electron');
+var path = require('path');
+
+var leveldbPath = path.join(remote.app.getPath('userData'), 'mydb-leveldb');
+var sqlitePath = path.join(remote.app.getPath('userData'), 'mydb-sqlite');
+
 // LevelDB
 
 var NodePouchDB = require('pouchdb');
 
-var leveldbDB = new NodePouchDB('mydb-leveldb');
+var leveldbDB = new NodePouchDB(leveldbPath);
 
 leveldbDB.info().then(function (info) {
   $('#leveldb').innerHTML = '&#10004; We can use PouchDB with LevelDB!';
@@ -39,7 +48,7 @@ leveldbDB.info().then(function (info) {
 // node-websql
 
 NodePouchDB.plugin(require('pouchdb-adapter-node-websql'));
-var sqliteDB = new NodePouchDB('mydb-sqlite', {adapter: 'websql'});
+var sqliteDB = new NodePouchDB(sqlitePath, {adapter: 'websql'});
 
 sqliteDB.info().then(function (info) {
   $('#sqlitedb').innerHTML = '&#10004; We can use PouchDB with node-websql (SQLite)!';
