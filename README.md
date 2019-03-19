@@ -38,7 +38,7 @@ If this step doesn't work for you (e.g. because you are using an older version o
 
 See [pouchdb-electron](https://github.com/nolanlawson/pouchdb-electron) for more installation instructions.
 
-## node-websql (sqlite3) adpater
+## node-websql (sqlite3) adapter
 
 If you want to run PouchDB in "Node.js style" but using SQLite, then you should use `pouchdb-adapter-node-websql`, as demonstrated in this project.
 
